@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: n8n
+    env: docker
+    plan: free
+    autoDeploy: true
+
+    envVars:
+      - key: N8N_HOST
+        value: 0.0.0.0
+
+      - key: N8N_PORT
+        value: 5678
+
+      - key: N8N_PROTOCOL
+        value: https
+
+      - key: WEBHOOK_URL
+        value: https://n8n-cloud-ps7g.onrender.com/
+
+      - key: GENERIC_TIMEZONE
+        value: Asia/Dubai
+
+      - key: N8N_ENCRYPTION_KEY
+        generateValue: true
